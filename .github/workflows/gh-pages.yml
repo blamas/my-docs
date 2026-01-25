@@ -9,23 +9,23 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Compile CV LaTeX document in english
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           working_directory: ./cv
           root_file: cv_en.tex
-          texlive_version: 2022
+          texlive_version: 2025
           latexmk_use_xelatex: true
           post_compile: "mv cv_en.pdf ../public && cp ../public/cv_en.pdf ../public/cv.pdf"
 
       - name: Compile CV LaTeX document in french
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           working_directory: ./cv
           root_file: cv_fr.tex
-          texlive_version: 2022
+          texlive_version: 2025
           latexmk_use_xelatex: true
           post_compile: "mv cv_fr.pdf ../public"
 
