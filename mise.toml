@@ -1,0 +1,17 @@
+[env]
+TEX_IMAGE = "ghcr.io/xu-cheng/texlive-full:latest"
+
+[tasks.cv_en]
+description = "Compile English CV (XeLaTeX via Podman)"
+run = "podman run --rm -v ${PWD}:/work -w /work/cv ${TEX_IMAGE} latexmk -xelatex -interaction=nonstopmode -halt-on-error cv_en.tex"
+
+[tasks.cv_fr]
+description = "Compile French CV (XeLaTeX via Podman)"
+run = "podman run --rm -v ${PWD}:/work -w /work/cv ${TEX_IMAGE} latexmk -xelatex -interaction=nonstopmode -halt-on-error cv_fr.tex"
+
+[tasks.cv]
+description = "Compile both CV PDFs"
+run = [
+  "podman run --rm -v ${PWD}:/work -w /work/cv ${TEX_IMAGE} latexmk -xelatex -interaction=nonstopmode -halt-on-error cv_en.tex",
+  "podman run --rm -v ${PWD}:/work -w /work/cv ${TEX_IMAGE} latexmk -xelatex -interaction=nonstopmode -halt-on-error cv_fr.tex",
+]
