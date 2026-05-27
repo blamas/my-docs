@@ -8,4 +8,21 @@
     ":automergeBranch",
   ],
   schedule: ["at any time"],
+  packageRules: [
+    {
+      matchManagers: ["github-actions"],
+      automerge: true,
+      automergeType: "branch",
+      matchUpdateTypes: ["minor", "patch", "digest"],
+      minimumReleaseAge: "3 days",
+      ignoreTests: true,
+    },
+    {
+      matchManagers: ["mise", "pip"],
+      automerge: true,
+      automergeType: "branch",
+      matchUpdateTypes: ["minor", "patch"],
+      ignoreTests: true,
+    },
+  ],
 }
