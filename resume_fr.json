@@ -1,0 +1,171 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Théo Rey",
+    "email": "contact@reyth.dev",
+    "url": "https://www.reyth.dev",
+    "location": {
+      "region": "France"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "reyth",
+        "url": "https://www.linkedin.com/in/reyth"
+      },
+      {
+        "network": "GitHub",
+        "username": "Blamas",
+        "url": "https://github.com/Blamas"
+      }
+    ],
+    "label": "Ingénieur SRE"
+  },
+  "work": [
+    {
+      "name": "SWAN",
+      "position": "Ingénieur SRE",
+      "startDate": "2024-02",
+      "highlights": [
+        "AWS, EKS, Terraform",
+        "Istio mesh et load balancing optimisation, amélioration de la fiabilité pour les opérations bancaires",
+        "Amélioration de l'autoscaling basé sur Karpenter et Keda"
+      ],
+      "location": "Remote, France"
+    },
+    {
+      "name": "ZELROS",
+      "position": "Ingénieur DevOps",
+      "startDate": "2022-09",
+      "highlights": [
+        "Azure Cloud, Kubernetes AKS, Terraform, Pulumi, Github Action",
+        "ServiceMesh avec Istio, Gitops avec Argocd et gestion de sauvegardes sur Velero",
+        "Monitoring avec Prometheus, Thanos, Loki, Grafana",
+        "SecOps avec Falco, Kyverno, Trivy, Az Workload Identity",
+        "Développement d'opérateurs Kubernetes en Java"
+      ],
+      "location": "Remote, France",
+      "endDate": "2024-01"
+    },
+    {
+      "name": "SKYLOUD",
+      "position": "Ingénieur Cloud (Alternance)",
+      "startDate": "2021-08",
+      "highlights": [
+        "Conception d'architectures Terraform sur AWS / Scaleway pour des Startups et PME",
+        "Administration de clusters Kubernetes RKE / EKS / Kapsule",
+        "Monitoring Prometheus / Grafana / Loki / CloudWatch",
+        "Migration d'infrastructures sans interruptions de services",
+        "Mise en place de solutions CI/CD et gitOps"
+      ],
+      "location": "Lyon, France",
+      "endDate": "2022-09"
+    },
+    {
+      "name": "ORANGE",
+      "position": "Responsable de projet informatique (Alternance)",
+      "startDate": "2020-09",
+      "highlights": [
+        "Conception de scripts pour traitements automatisés de conversion et migration de données",
+        "Déploiement de sites wiki et administration de serveurs RHEL"
+      ],
+      "location": "L'Isle d'Abeau, France",
+      "endDate": "2021-07"
+    },
+    {
+      "name": "Lyon 1 UCBL",
+      "position": "Développeur Python (Stage)",
+      "startDate": "2020-05",
+      "highlights": [
+        "Développements de scripts de pre/post-processing d'images et de cartes GIS"
+      ],
+      "location": "Villeurbanne, France",
+      "endDate": "2020-07"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Université Claude Bernard Lyon 1",
+      "area": "Systèmes, Réseaux et Infrastructures Virtuelles",
+      "studyType": "Master",
+      "startDate": "2020-09",
+      "endDate": "2022-06",
+      "courses": [
+        "Systèmes, réseaux et sécurité avancé",
+        "Gestion de parc, administration système et monitoring",
+        "Virtualisation, containeurisation et orchestration"
+      ],
+      "location": "Lyon, France"
+    },
+    {
+      "institution": "Université Claude Bernard Lyon 1",
+      "area": "Informatique",
+      "studyType": "Licence",
+      "startDate": "2017-09",
+      "endDate": "2020-06",
+      "courses": [
+        "Algorithmie, POO, Réseaux, BDD"
+      ],
+      "location": "Lyon, France"
+    }
+  ],
+  "skills": [
+    {
+      "name": "SRE",
+      "keywords": [
+        "Kubernetes",
+        "IaC",
+        "GitOps",
+        "Sécurité et hardening cloud",
+        "Observabilité"
+      ]
+    },
+    {
+      "name": "Cloud",
+      "keywords": [
+        "AWS",
+        "Azure",
+        "Scaleway"
+      ]
+    },
+    {
+      "name": "Programmation",
+      "keywords": [
+        "Python",
+        "TypeScript",
+        "Bash"
+      ]
+    },
+    {
+      "name": "Autre",
+      "keywords": [
+        "Systèmes Linux et réseau",
+        "Conteneurisation",
+        "CI/CD",
+        "Load testing",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "name": "Langues",
+      "keywords": [
+        "Français",
+        "Anglais"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "CKS, Certified Kubernetes Security Specialist",
+      "date": "2022-2024"
+    },
+    {
+      "name": "CKA, Certified Kubernetes Administrator",
+      "date": "2021-2024"
+    },
+    {
+      "name": "TOEIC, Anglais - 990",
+      "date": "2022-2024"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Théo Rey",
+    "email": "contact@reyth.dev",
+    "url": "https://www.reyth.dev",
+    "location": {
+      "region": "France"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "reyth",
+        "url": "https://www.linkedin.com/in/reyth"
+      },
+      {
+        "network": "GitHub",
+        "username": "Blamas",
+        "url": "https://github.com/Blamas"
+      }
+    ],
+    "label": "Site Reliability Engineer"
+  },
+  "work": [
+    {
+      "name": "SWAN",
+      "position": "Site Reliability Engineer",
+      "startDate": "2024-02",
+      "highlights": [
+        "AWS, EKS, Terraform",
+        "Istio and load balancing optimization, reliability hardening for banking operations",
+        "Autoscaling improvement based on Karpenter and Keda"
+      ],
+      "location": "Remote, France"
+    },
+    {
+      "name": "ZELROS",
+      "position": "DevOps Engineer",
+      "startDate": "2022-09",
+      "highlights": [
+        "Azure Cloud, Kubernetes AKS, Terraform, Pulumi, GitHub Actions",
+        "ServiceMesh with Istio, GitOps with ArgoCD and backup management with Velero",
+        "Monitoring using Prometheus, Thanos, Loki, Grafana",
+        "SecOps with Falco, Kyverno, Trivy, Az Workload Identity",
+        "Kubernetes operator development in Java"
+      ],
+      "location": "Remote, France",
+      "endDate": "2024-01"
+    },
+    {
+      "name": "SKYLOUD",
+      "position": "Cloud Engineer (Apprenticeship)",
+      "startDate": "2021-08",
+      "highlights": [
+        "Design of AWS / Scaleway cloud architectures with Terraform",
+        "Administration of RKE / EKS / Kapsule Kubernetes clusters",
+        "Monitoring with Prometheus / Grafana / Loki / CloudWatch",
+        "Infrastructure migration without interruptions",
+        "Deployment of CI/CD and GitOps solutions"
+      ],
+      "location": "Lyon, France",
+      "endDate": "2022-09"
+    },
+    {
+      "name": "ORANGE",
+      "position": "IT Project Manager (Apprenticeship)",
+      "startDate": "2020-09",
+      "highlights": [
+        "Script development for automated data conversion and migration",
+        "Deployment of wiki websites and RHEL server administration"
+      ],
+      "location": "L'Isle d'Abeau, France",
+      "endDate": "2021-07"
+    },
+    {
+      "name": "Lyon 1 UCBL",
+      "position": "Python Developer (Internship)",
+      "startDate": "2020-05",
+      "highlights": [
+        "Script development for pre- and post-processing of satellite images and GIS maps"
+      ],
+      "location": "Villeurbanne, France",
+      "endDate": "2020-07"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Claude Bernard University Lyon 1",
+      "area": "System, Networks and Virtual Infrastructures",
+      "studyType": "Master",
+      "startDate": "2020-09",
+      "endDate": "2022-06",
+      "courses": [
+        "Systems, networks and security",
+        "System administration and monitoring",
+        "Virtualization, containerization and orchestration"
+      ],
+      "location": "Lyon, France"
+    },
+    {
+      "institution": "Claude Bernard University Lyon 1",
+      "area": "Computer Science",
+      "studyType": "Bachelor's degree",
+      "startDate": "2017-09",
+      "endDate": "2020-06",
+      "courses": [
+        "Algorithmic, OOP, Networking, DB"
+      ],
+      "location": "Lyon, France"
+    }
+  ],
+  "skills": [
+    {
+      "name": "SRE",
+      "keywords": [
+        "Kubernetes",
+        "IaC",
+        "GitOps",
+        "Cloud security and hardening",
+        "Observability stacks"
+      ]
+    },
+    {
+      "name": "Cloud",
+      "keywords": [
+        "AWS",
+        "Azure",
+        "Scaleway"
+      ]
+    },
+    {
+      "name": "Programming",
+      "keywords": [
+        "Python",
+        "TypeScript",
+        "Bash"
+      ]
+    },
+    {
+      "name": "Others",
+      "keywords": [
+        "Linux systems and networking",
+        "Containerization",
+        "CI/CD",
+        "Load testing",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "name": "Languages",
+      "keywords": [
+        "English",
+        "French"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "CKS, Certified Kubernetes Security Specialist",
+      "date": "2022-2024"
+    },
+    {
+      "name": "CKA, Certified Kubernetes Administrator",
+      "date": "2021-2024"
+    },
+    {
+      "name": "TOEIC, English - 990",
+      "date": "2022-2024"
+    }
+  ]
+}
