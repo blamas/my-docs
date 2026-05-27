@@ -21,7 +21,7 @@
       matchManagers: ["mise", "pip"],
       automerge: true,
       automergeType: "branch",
-      matchUpdateTypes: ["minor", "patch"],
+      matchUpdateTypes: ["patch"],
       ignoreTests: true,
     },
   ],
