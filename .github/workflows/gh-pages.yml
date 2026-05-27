@@ -1,40 +1,58 @@
-name: LaTeX Deploy
+name: RenderCV Deploy
 
 on:
   push:
     branches:
-      - main # Set a branch name to trigger deployment
+      - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
 
-      - name: Compile CV LaTeX document in english
-        uses: xu-cheng/latex-action@v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         with:
-          working_directory: ./cv
-          root_file: cv_en.tex
-          texlive_version: 2025
-          latexmk_use_xelatex: true
-          post_compile: "mv cv_en.pdf ../public && cp ../public/cv_en.pdf ../public/cv.pdf"
+          python-version: "3.12"
 
-      - name: Compile CV LaTeX document in french
-        uses: xu-cheng/latex-action@v4
+      - name: Cache pip
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
         with:
-          working_directory: ./cv
-          root_file: cv_fr.tex
-          texlive_version: 2025
-          latexmk_use_xelatex: true
-          post_compile: "mv cv_fr.pdf ../public"
+          path: ~/.cache/pip
+          key: pip-rendercv-${{ hashFiles('**/gh-pages.yml') }}
+          restore-keys: pip-rendercv-
 
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Install dependencies
+        run: pip install 'rendercv[full]'
+
+      - name: Render English resume
+        run: |
+          rendercv render resume/resume_en.yaml
+          python3 .github/scripts/to_jsonresume.py resume/resume_en.yaml public/resume_en.json
+          find resume/rendercv_output -maxdepth 1 -name '*.pdf'  -exec cp {} public/resume_en.pdf  \;
+          find resume/rendercv_output -maxdepth 1 -name '*.md'   -exec cp {} public/resume_en.md   \;
+          find resume/rendercv_output -maxdepth 1 -name '*.html' -exec cp {} public/resume_en.html \;
+
+      - name: Render French resume
+        run: |
+          rendercv render resume/resume_fr.yaml
+          python3 .github/scripts/to_jsonresume.py resume/resume_fr.yaml public/resume_fr.json
+          find resume/rendercv_output -maxdepth 1 -name '*.pdf'  -exec cp {} public/resume_fr.pdf  \;
+          find resume/rendercv_output -maxdepth 1 -name '*.md'   -exec cp {} public/resume_fr.md   \;
+          find resume/rendercv_output -maxdepth 1 -name '*.html' -exec cp {} public/resume_fr.html \;
+
+      - name: Finalise outputs
+        run: |
+          cp public/resume_en.pdf public/resume.pdf
+          cp public/resume_en.pdf public/cv_en.pdf
+          cp public/resume_fr.pdf public/cv_fr.pdf
+          cp public/resume_en.pdf public/cv.pdf
+
+      - uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          cname: ${{secrets.CNAME}}
+          cname: ${{ secrets.CNAME }}
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
           commit_message: ${{ github.event.head_commit.message }}

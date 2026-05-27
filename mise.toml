@@ -1,17 +1,35 @@
+[tools]
+uv = "latest"
+
 [env]
-TEX_IMAGE = "ghcr.io/xu-cheng/texlive-full:latest"
+_.python.venv = { path = ".venv", create = true }
 
-[tasks.cv_en]
-description = "Compile English CV (XeLaTeX via Podman)"
-run = "podman run --rm -v ${PWD}:/work -w /work/cv ${TEX_IMAGE} latexmk -xelatex -interaction=nonstopmode -halt-on-error cv_en.tex"
+[tasks.install]
+run = "uv pip install -r requirements.txt"
 
-[tasks.cv_fr]
-description = "Compile French CV (XeLaTeX via Podman)"
-run = "podman run --rm -v ${PWD}:/work -w /work/cv ${TEX_IMAGE} latexmk -xelatex -interaction=nonstopmode -halt-on-error cv_fr.tex"
+[tasks."resume:en"]
+depends = ["install"]
+run = """
+rendercv render resume/resume_en.yaml
+python3 .github/scripts/to_jsonresume.py resume/resume_en.yaml public/resume_en.json
+find resume/rendercv_output -maxdepth 1 -name '*.pdf'  -exec cp {} public/resume_en.pdf  \\;
+find resume/rendercv_output -maxdepth 1 -name '*.md'   -exec cp {} public/resume_en.md   \\;
+find resume/rendercv_output -maxdepth 1 -name '*.html' -exec cp {} public/resume_en.html \\;
+"""
 
-[tasks.cv]
-description = "Compile both CV PDFs"
-run = [
-  "podman run --rm -v ${PWD}:/work -w /work/cv ${TEX_IMAGE} latexmk -xelatex -interaction=nonstopmode -halt-on-error cv_en.tex",
-  "podman run --rm -v ${PWD}:/work -w /work/cv ${TEX_IMAGE} latexmk -xelatex -interaction=nonstopmode -halt-on-error cv_fr.tex",
-]
+[tasks."resume:fr"]
+depends = ["install"]
+run = """
+rendercv render resume/resume_fr.yaml
+python3 .github/scripts/to_jsonresume.py resume/resume_fr.yaml public/resume_fr.json
+find resume/rendercv_output -maxdepth 1 -name '*.pdf'  -exec cp {} public/resume_fr.pdf  \\;
+find resume/rendercv_output -maxdepth 1 -name '*.md'   -exec cp {} public/resume_fr.md   \\;
+find resume/rendercv_output -maxdepth 1 -name '*.html' -exec cp {} public/resume_fr.html \\;
+"""
+
+[tasks.resume]
+run = """
+mise run resume:en
+mise run resume:fr
+cp public/resume_en.pdf public/resume.pdf
+"""

@@ -1,1 +1,0 @@
-../tex_utils/awesome-cv.cls

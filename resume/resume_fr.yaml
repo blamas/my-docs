@@ -1,0 +1,111 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/sinaatalay/rendercv/main/schema.json
+cv:
+  name: Théo Rey
+  location: France
+  email: contact@reyth.dev
+  website: https://www.reyth.dev
+  social_networks:
+    - network: LinkedIn
+      username: reyth
+    - network: GitHub
+      username: Blamas
+  sections:
+    compétences:
+      - label: SRE
+        details: "Kubernetes, IaC, GitOps, Sécurité et hardening cloud, Observabilité"
+      - label: Cloud
+        details: "AWS, Azure, Scaleway"
+      - label: Programmation
+        details: "Python, TypeScript, Bash"
+      - label: Autre
+        details: "Systèmes Linux et réseau, Conteneurisation, CI/CD, Load testing, PostgreSQL"
+      - label: Langues
+        details: "Français, Anglais"
+    expérience:
+      - company: SWAN
+        position: Ingénieur SRE
+        location: Remote, France
+        start_date: "2024-02"
+        end_date: present
+        highlights:
+          - "AWS, EKS, Terraform"
+          - "Istio mesh et load balancing optimisation, amélioration de la fiabilité pour les opérations bancaires"
+          - "Amélioration de l'autoscaling basé sur Karpenter et Keda"
+      - company: ZELROS
+        position: Ingénieur DevOps
+        location: Remote, France
+        start_date: "2022-09"
+        end_date: "2024-01"
+        highlights:
+          - "Azure Cloud, Kubernetes AKS, Terraform, Pulumi, Github Action"
+          - "ServiceMesh avec Istio, Gitops avec Argocd et gestion de sauvegardes sur Velero"
+          - "Monitoring avec Prometheus, Thanos, Loki, Grafana"
+          - "SecOps avec Falco, Kyverno, Trivy, Az Workload Identity"
+          - "Développement d'opérateurs Kubernetes en Java"
+      - company: SKYLOUD
+        position: Ingénieur Cloud (Alternance)
+        location: Lyon, France
+        start_date: "2021-08"
+        end_date: "2022-09"
+        highlights:
+          - "Conception d'architectures Terraform sur AWS / Scaleway pour des Startups et PME"
+          - "Administration de clusters Kubernetes RKE / EKS / Kapsule"
+          - "Monitoring Prometheus / Grafana / Loki / CloudWatch"
+          - "Migration d'infrastructures sans interruptions de services"
+          - "Mise en place de solutions CI/CD et gitOps"
+      - company: ORANGE
+        position: Responsable de projet informatique (Alternance)
+        location: "L'Isle d'Abeau, France"
+        start_date: "2020-09"
+        end_date: "2021-07"
+        highlights:
+          - "Conception de scripts pour traitements automatisés de conversion et migration de données"
+          - "Déploiement de sites wiki et administration de serveurs RHEL"
+      - company: Lyon 1 UCBL
+        position: Développeur Python (Stage)
+        location: "Villeurbanne, France"
+        start_date: "2020-05"
+        end_date: "2020-07"
+        highlights:
+          - "Développements de scripts de pre/post-processing d'images et de cartes GIS"
+    formations:
+      - institution: Université Claude Bernard Lyon 1
+        area: Systèmes, Réseaux et Infrastructures Virtuelles
+        degree: Master
+        location: Lyon, France
+        start_date: "2020-09"
+        end_date: "2022-06"
+        highlights:
+          - "Systèmes, réseaux et sécurité avancé"
+          - "Gestion de parc, administration système et monitoring"
+          - "Virtualisation, containeurisation et orchestration"
+      - institution: Université Claude Bernard Lyon 1
+        area: Informatique
+        degree: Licence
+        location: Lyon, France
+        start_date: "2017-09"
+        end_date: "2020-06"
+        highlights:
+          - "Algorithmie, POO, Réseaux, BDD"
+    certifications:
+      - label: "CKS, Certified Kubernetes Security Specialist"
+        details: "2022-2024"
+      - label: "CKA, Certified Kubernetes Administrator"
+        details: "2021-2024"
+      - label: "TOEIC, Anglais - 990"
+        details: "2022-2024"
+
+locale:
+  language: french
+
+design:
+  theme: engineeringresumes
+  page:
+    size: a4
+    top_margin: 0.5in
+    bottom_margin: 0.5in
+    left_margin: 0.5in
+    right_margin: 0.5in
+  typography:
+    font_size:
+      body: 9pt

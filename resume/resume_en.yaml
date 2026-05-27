@@ -1,0 +1,108 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/sinaatalay/rendercv/main/schema.json
+cv:
+  name: Théo Rey
+  location: France
+  email: contact@reyth.dev
+  website: https://www.reyth.dev
+  social_networks:
+    - network: LinkedIn
+      username: reyth
+    - network: GitHub
+      username: Blamas
+  sections:
+    skills:
+      - label: SRE
+        details: "Kubernetes, IaC, GitOps, Cloud security and hardening, Observability stacks"
+      - label: Cloud
+        details: "AWS, Azure, Scaleway"
+      - label: Programming
+        details: "Python, TypeScript, Bash"
+      - label: Others
+        details: "Linux systems and networking, Containerization, CI/CD, Load testing, PostgreSQL"
+      - label: Languages
+        details: "English, French"
+    experience:
+      - company: SWAN
+        position: Site Reliability Engineer
+        location: Remote, France
+        start_date: "2024-02"
+        end_date: present
+        highlights:
+          - "AWS, EKS, Terraform"
+          - "Istio and load balancing optimization, reliability hardening for banking operations"
+          - "Autoscaling improvement based on Karpenter and Keda"
+      - company: ZELROS
+        position: DevOps Engineer
+        location: Remote, France
+        start_date: "2022-09"
+        end_date: "2024-01"
+        highlights:
+          - "Azure Cloud, Kubernetes AKS, Terraform, Pulumi, GitHub Actions"
+          - "ServiceMesh with Istio, GitOps with ArgoCD and backup management with Velero"
+          - "Monitoring using Prometheus, Thanos, Loki, Grafana"
+          - "SecOps with Falco, Kyverno, Trivy, Az Workload Identity"
+          - "Kubernetes operator development in Java"
+      - company: SKYLOUD
+        position: Cloud Engineer (Apprenticeship)
+        location: Lyon, France
+        start_date: "2021-08"
+        end_date: "2022-09"
+        highlights:
+          - "Design of AWS / Scaleway cloud architectures with Terraform"
+          - "Administration of RKE / EKS / Kapsule Kubernetes clusters"
+          - "Monitoring with Prometheus / Grafana / Loki / CloudWatch"
+          - "Infrastructure migration without interruptions"
+          - "Deployment of CI/CD and GitOps solutions"
+      - company: ORANGE
+        position: IT Project Manager (Apprenticeship)
+        location: "L'Isle d'Abeau, France"
+        start_date: "2020-09"
+        end_date: "2021-07"
+        highlights:
+          - "Script development for automated data conversion and migration"
+          - "Deployment of wiki websites and RHEL server administration"
+      - company: Lyon 1 UCBL
+        position: Python Developer (Internship)
+        location: "Villeurbanne, France"
+        start_date: "2020-05"
+        end_date: "2020-07"
+        highlights:
+          - "Script development for pre- and post-processing of satellite images and GIS maps"
+    education:
+      - institution: Claude Bernard University Lyon 1
+        area: System, Networks and Virtual Infrastructures
+        degree: Master
+        location: Lyon, France
+        start_date: "2020-09"
+        end_date: "2022-06"
+        highlights:
+          - "Systems, networks and security"
+          - "System administration and monitoring"
+          - "Virtualization, containerization and orchestration"
+      - institution: Claude Bernard University Lyon 1
+        area: Computer Science
+        degree: "Bachelor's degree"
+        location: Lyon, France
+        start_date: "2017-09"
+        end_date: "2020-06"
+        highlights:
+          - "Algorithmic, OOP, Networking, DB"
+    certifications:
+      - label: "CKS, Certified Kubernetes Security Specialist"
+        details: "2022-2024"
+      - label: "CKA, Certified Kubernetes Administrator"
+        details: "2021-2024"
+      - label: "TOEIC, English - 990"
+        details: "2022-2024"
+
+design:
+  theme: engineeringresumes
+  page:
+    size: a4
+    top_margin: 0.5in
+    bottom_margin: 0.5in
+    left_margin: 0.5in
+    right_margin: 0.5in
+  typography:
+    font_size:
+      body: 9pt
