@@ -29,7 +29,7 @@
       "startDate": "2024-02",
       "highlights": [
         "Réduction des 5xx sur les chemins de paiement critiques via tuning Istio (circuit breaking, load balancing, retry)",
-        "Développement en Go d'un outillage interne de tests de charge et de fiabilité, avec métriques et traces",
+        "Développement d'un outillage interne de tests de charge et de fiabilité, avec métriques et traces",
         "Refonte de l'autoscaling avec Karpenter (mixed fleet) et KEDA, réduction des coûts et de la latence de scale-out",
         "Upgrades majeurs PostgreSQL sans interruption sur clusters répliqués sous contraintes de conformité bancaire",
         "Exploitation de plusieurs clusters EKS (40+ services, stack réseau complexe), upgrades et hardening",
@@ -42,7 +42,7 @@
       "position": "Ingénieur DevOps",
       "startDate": "2022-09",
       "highlights": [
-        "Développement d'un opérateur Kubernetes en Java pour le provisionnement de resource groups Azure, stockage et bdd par tenant (80+ tenants)",
+        "Développement d'un opérateur Kubernetes Java provisionnant resource groups Azure, stockage et bdd (80+ tenants)",
         "Mise en place d'un outillage SecOps aligné sur ISO 27001 avec Falco, Kyverno, Trivy et Azure Workload Identity",
         "Déploiement de Prometheus + Thanos, Loki et Grafana sur des clusters AKS multi-tenant",
         "Gestion des pipelines GitOps avec ArgoCD et disaster recovery avec Velero"

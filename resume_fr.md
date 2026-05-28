@@ -28,7 +28,7 @@ Fév 2024 – présent
 
 - Réduction des 5xx sur les chemins de paiement critiques via tuning Istio (circuit breaking, load balancing, retry)
 
-- Développement en Go d'un outillage interne de tests de charge et de fiabilité, avec métriques et traces
+- Développement d'un outillage interne de tests de charge et de fiabilité, avec métriques et traces
 
 - Refonte de l'autoscaling avec Karpenter (mixed fleet) et KEDA, réduction des coûts et de la latence de scale-out
 
@@ -44,7 +44,7 @@ Fév 2024 – présent
 
 Sep 2022 – Jan 2024
 
-- Développement d'un opérateur Kubernetes en Java pour le provisionnement de resource groups Azure, stockage et bdd par tenant (80+ tenants)
+- Développement d'un opérateur Kubernetes Java provisionnant resource groups Azure, stockage et bdd (80+ tenants)
 
 - Mise en place d'un outillage SecOps aligné sur ISO 27001 avec Falco, Kyverno, Trivy et Azure Workload Identity
 

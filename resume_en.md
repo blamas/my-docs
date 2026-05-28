@@ -28,7 +28,7 @@ Feb 2024 – present
 
 - Reduced 5xx error rate on payment-critical paths by tuning Istio circuit breaking, load balancing and retry policies
 
-- Built internal load and reliability testing tooling in Go with metrics and traces
+- Built internal load and reliability testing tooling with metrics and traces
 
 - Rebuilt autoscaling on Karpenter (mixed fleet) and KEDA, cutting compute cost and scale-out latency
 
