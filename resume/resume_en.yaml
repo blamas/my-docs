@@ -10,75 +10,68 @@ cv:
     - network: GitHub
       username: Blamas
   sections:
+    summary:
+      - "Senior SRE building and operating Kubernetes-native platforms across multi-cloud and on-prem environments. Focused on reliability engineering, internal tooling development, and security for high-stakes environments."
     skills:
       - label: SRE
-        details: "Kubernetes, IaC, GitOps, Cloud security and hardening, Observability stacks"
-      - label: Cloud
-        details: "AWS, Azure, Scaleway"
+        details: "Kubernetes, IaC, GitOps (Flux, ArgoCD), Service Mesh (Istio, Cilium), Cloud security and hardening, Observability"
+      - label: Infrastructure
+        details: "AWS, Azure, Scaleway, on-prem"
       - label: Programming
-        details: "Python, TypeScript, Bash"
+        details: "Python, Go, TypeScript, Bash"
       - label: Others
-        details: "Linux systems and networking, Containerization, CI/CD, Load testing, PostgreSQL"
+        details: "Linux systems and networking, Containerization, CI/CD, Load testing (k6), PostgreSQL"
       - label: Languages
         details: "English, French"
     experience:
       - company: SWAN
-        position: Site Reliability Engineer
+        position: Senior Site Reliability Engineer
         location: Remote, France
         start_date: "2024-02"
         end_date: present
         highlights:
-          - "AWS, EKS, Terraform"
-          - "Istio and load balancing optimization, reliability hardening for banking operations"
-          - "Autoscaling improvement based on Karpenter and Keda"
+          - "Reduced 5xx error rate on payment-critical paths by tuning Istio circuit breaking, load balancing and retry policies"
+          - "Built internal load and reliability testing tooling with metrics and traces"
+          - "Rebuilt autoscaling on Karpenter (mixed fleet) and KEDA, cutting compute cost and scale-out latency"
+          - "Led zero-downtime PostgreSQL major upgrades on replicated production clusters under banking compliance constraints"
+          - "Operated multiple EKS clusters with 40+ services and complex network stack, including upgrades and hardening"
+          - "Designed SLO and alerting framework on Grafana, owned on-call rotation and incident response"
       - company: ZELROS
         position: DevOps Engineer
         location: Remote, France
         start_date: "2022-09"
         end_date: "2024-01"
         highlights:
-          - "Azure Cloud, Kubernetes AKS, Terraform, Pulumi, GitHub Actions"
-          - "ServiceMesh with Istio, GitOps with ArgoCD and backup management with Velero"
-          - "Monitoring using Prometheus, Thanos, Loki, Grafana"
-          - "SecOps with Falco, Kyverno, Trivy, Az Workload Identity"
-          - "Kubernetes operator development in Java"
+          - "Built a Java Kubernetes operator provisioning per-tenant Azure resource groups, storage and databases (80+ tenants)"
+          - "Implemented ISO 27001-aligned SecOps tooling with Falco, Kyverno, Trivy and Azure Workload Identity"
+          - "Deployed Prometheus + Thanos, Loki and Grafana across multi-tenant AKS clusters"
+          - "Owned GitOps pipelines with ArgoCD and disaster recovery with Velero"
       - company: SKYLOUD
         position: Cloud Engineer (Apprenticeship)
         location: Lyon, France
         start_date: "2021-08"
         end_date: "2022-09"
         highlights:
-          - "Design of AWS / Scaleway cloud architectures with Terraform"
-          - "Administration of RKE / EKS / Kapsule Kubernetes clusters"
-          - "Monitoring with Prometheus / Grafana / Loki / CloudWatch"
-          - "Infrastructure migration without interruptions"
-          - "Deployment of CI/CD and GitOps solutions"
+          - "Designed and delivered AWS/Scaleway Terraform architectures for ~10 client projects"
+          - "Administered RKE, EKS, and Kapsule Kubernetes clusters and led zero-downtime infrastructure migrations"
+          - "Deployed CI/CD pipelines, GitOps solutions, and Prometheus/Grafana/Loki monitoring stacks"
       - company: ORANGE
         position: IT Project Manager (Apprenticeship)
         location: "L'Isle d'Abeau, France"
         start_date: "2020-09"
         end_date: "2021-07"
         highlights:
-          - "Script development for automated data conversion and migration"
-          - "Deployment of wiki websites and RHEL server administration"
-      - company: Lyon 1 UCBL
-        position: Python Developer (Internship)
-        location: "Villeurbanne, France"
-        start_date: "2020-05"
-        end_date: "2020-07"
-        highlights:
-          - "Script development for pre- and post-processing of satellite images and GIS maps"
+          - "Wrote Python/Bash automation for data conversion and migration workflows"
+          - "Administered RHEL servers and deployed wiki infrastructure"
     education:
       - institution: Claude Bernard University Lyon 1
-        area: System, Networks and Virtual Infrastructures
+        area: System, Networks and Infrastructures
         degree: Master
         location: Lyon, France
         start_date: "2020-09"
         end_date: "2022-06"
         highlights:
-          - "Systems, networks and security"
-          - "System administration and monitoring"
-          - "Virtualization, containerization and orchestration"
+          - "Systems, networks, security, virtualization and orchestration"
       - institution: Claude Bernard University Lyon 1
         area: Computer Science
         degree: "Bachelor's degree"
@@ -86,14 +79,14 @@ cv:
         start_date: "2017-09"
         end_date: "2020-06"
         highlights:
-          - "Algorithmic, OOP, Networking, DB"
+          - "Algorithms, OOP, networking, databases"
     certifications:
       - label: "CKS, Certified Kubernetes Security Specialist"
-        details: "2022-2024"
+        details: "2022"
       - label: "CKA, Certified Kubernetes Administrator"
-        details: "2021-2024"
+        details: "2021"
       - label: "TOEIC, English - 990"
-        details: "2022-2024"
+        details: "2022"
 
 design:
   theme: engineeringresumes

@@ -10,75 +10,68 @@ cv:
     - network: GitHub
       username: Blamas
   sections:
+    profil:
+      - "Ingénieur SRE senior spécialisé dans la conception et l'exploitation de plateformes Kubernetes en multi-cloud et on-prem, avec un focus sur le reliability engineering, le développement d'outillage et la sécurité pour des environnements critiques."
     compétences:
       - label: SRE
-        details: "Kubernetes, IaC, GitOps, Sécurité et hardening cloud, Observabilité"
-      - label: Cloud
-        details: "AWS, Azure, Scaleway"
+        details: "Kubernetes, IaC, GitOps (Flux, ArgoCD), Service Mesh (Istio, Cilium), Sécurité cloud et hardening, Observabilité"
+      - label: Infrastructure
+        details: "AWS, Azure, Scaleway, on-prem"
       - label: Programmation
-        details: "Python, TypeScript, Bash"
-      - label: Autre
-        details: "Systèmes Linux et réseau, Conteneurisation, CI/CD, Load testing, PostgreSQL"
+        details: "Python, Go, TypeScript, Bash"
+      - label: Autres
+        details: "Systèmes Linux et réseau, Conteneurisation, CI/CD, Load testing (k6), PostgreSQL"
       - label: Langues
         details: "Français, Anglais"
     expérience:
       - company: SWAN
-        position: Ingénieur SRE
+        position: Ingénieur SRE Senior
         location: Remote, France
         start_date: "2024-02"
         end_date: present
         highlights:
-          - "AWS, EKS, Terraform"
-          - "Istio mesh et load balancing optimisation, amélioration de la fiabilité pour les opérations bancaires"
-          - "Amélioration de l'autoscaling basé sur Karpenter et Keda"
+          - "Réduction des 5xx sur les chemins de paiement critiques via tuning Istio (circuit breaking, load balancing, retry)"
+          - "Développement d'un outillage interne de tests de charge et de fiabilité, avec métriques et traces"
+          - "Refonte de l'autoscaling avec Karpenter (mixed fleet) et KEDA, réduction des coûts et de la latence de scale-out"
+          - "Upgrades majeurs PostgreSQL sans interruption sur clusters répliqués sous contraintes de conformité bancaire"
+          - "Exploitation de plusieurs clusters EKS (40+ services, stack réseau complexe), upgrades et hardening"
+          - "Conception du framework SLO et alerting sur Grafana, astreinte et gestion des incidents"
       - company: ZELROS
         position: Ingénieur DevOps
         location: Remote, France
         start_date: "2022-09"
         end_date: "2024-01"
         highlights:
-          - "Azure Cloud, Kubernetes AKS, Terraform, Pulumi, Github Action"
-          - "ServiceMesh avec Istio, Gitops avec Argocd et gestion de sauvegardes sur Velero"
-          - "Monitoring avec Prometheus, Thanos, Loki, Grafana"
-          - "SecOps avec Falco, Kyverno, Trivy, Az Workload Identity"
-          - "Développement d'opérateurs Kubernetes en Java"
+          - "Développement d'un opérateur Kubernetes Java provisionnant resource groups Azure, stockage et bdd (80+ tenants)"
+          - "Mise en place d'un outillage SecOps aligné sur ISO 27001 avec Falco, Kyverno, Trivy et Azure Workload Identity"
+          - "Déploiement de Prometheus + Thanos, Loki et Grafana sur des clusters AKS multi-tenant"
+          - "Gestion des pipelines GitOps avec ArgoCD et disaster recovery avec Velero"
       - company: SKYLOUD
         position: Ingénieur Cloud (Alternance)
         location: Lyon, France
         start_date: "2021-08"
         end_date: "2022-09"
         highlights:
-          - "Conception d'architectures Terraform sur AWS / Scaleway pour des Startups et PME"
-          - "Administration de clusters Kubernetes RKE / EKS / Kapsule"
-          - "Monitoring Prometheus / Grafana / Loki / CloudWatch"
-          - "Migration d'infrastructures sans interruptions de services"
-          - "Mise en place de solutions CI/CD et gitOps"
+          - "Conception et livraison d'architectures Terraform AWS/Scaleway pour une dizaine de projets clients"
+          - "Administration de clusters Kubernetes RKE, EKS et Kapsule, migrations sans interruption de service"
+          - "Déploiement de pipelines CI/CD, solutions GitOps et stacks de monitoring Prometheus/Grafana/Loki"
       - company: ORANGE
         position: Responsable de projet informatique (Alternance)
         location: "L'Isle d'Abeau, France"
         start_date: "2020-09"
         end_date: "2021-07"
         highlights:
-          - "Conception de scripts pour traitements automatisés de conversion et migration de données"
-          - "Déploiement de sites wiki et administration de serveurs RHEL"
-      - company: Lyon 1 UCBL
-        position: Développeur Python (Stage)
-        location: "Villeurbanne, France"
-        start_date: "2020-05"
-        end_date: "2020-07"
-        highlights:
-          - "Développements de scripts de pre/post-processing d'images et de cartes GIS"
+          - "Automatisation de workflows de conversion et migration de données en Python/Bash"
+          - "Administration de serveurs RHEL et déploiement d'une infrastructure wiki"
     formations:
       - institution: Université Claude Bernard Lyon 1
-        area: Systèmes, Réseaux et Infrastructures Virtuelles
+        area: Systèmes, Réseaux et Infrastructures
         degree: Master
         location: Lyon, France
         start_date: "2020-09"
         end_date: "2022-06"
         highlights:
-          - "Systèmes, réseaux et sécurité avancé"
-          - "Gestion de parc, administration système et monitoring"
-          - "Virtualisation, containeurisation et orchestration"
+          - "Systèmes, réseaux, sécurité, virtualisation et orchestration"
       - institution: Université Claude Bernard Lyon 1
         area: Informatique
         degree: Licence
@@ -86,14 +79,14 @@ cv:
         start_date: "2017-09"
         end_date: "2020-06"
         highlights:
-          - "Algorithmie, POO, Réseaux, BDD"
+          - "Algorithmique, POO, réseaux, bases de données"
     certifications:
       - label: "CKS, Certified Kubernetes Security Specialist"
-        details: "2022-2024"
+        details: "2022"
       - label: "CKA, Certified Kubernetes Administrator"
-        details: "2021-2024"
+        details: "2021"
       - label: "TOEIC, Anglais - 990"
-        details: "2022-2024"
+        details: "2022"
 
 locale:
   language: french

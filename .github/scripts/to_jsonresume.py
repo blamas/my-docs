@@ -61,7 +61,13 @@ def map_skills(entries: list) -> list:
     return [
         {
             "name": e["label"],
-            "keywords": [k.strip() for k in str(e.get("details", "")).split(",")],
+            "keywords": [
+                k.strip()
+                for k in str(e.get("details", ""))
+                .replace("(", "")
+                .replace(")", "")
+                .split(",")
+            ],
         }
         for e in entries
     ]
@@ -75,6 +81,8 @@ def classify_section(name: str, entries: list) -> str:
     if not entries:
         return "unknown"
     sample = entries[0]
+    if isinstance(sample, str):
+        return "summary"
     if "company" in sample:
         return "work"
     if "institution" in sample:
@@ -105,10 +113,13 @@ def convert(src: Path) -> dict:
     }
 
     work, education, skills, certificates = [], [], [], []
+    summary_parts: list[str] = []
 
     for section, entries in cv.get("sections", {}).items():
         kind = classify_section(section, entries or [])
-        if kind == "work":
+        if kind == "summary":
+            summary_parts.extend(str(e) for e in entries)
+        elif kind == "work":
             work.extend(map_work(entries))
         elif kind == "education":
             education.extend(map_education(entries))
@@ -121,6 +132,8 @@ def convert(src: Path) -> dict:
                 f"warning: skipping unrecognised section '{section}'", file=sys.stderr
             )
 
+    if summary_parts:
+        basics["summary"] = "\n\n".join(summary_parts)
     if work:
         basics["label"] = work[0]["position"]
 
