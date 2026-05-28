@@ -7,27 +7,36 @@
 - GitHub: [Blamas](https://github.com/Blamas)
 
 
+# Summary
+Senior SRE building and operating Kubernetes-native platforms across multi-cloud and on-prem environments. Focused on reliability engineering, internal tooling development, and security for high-stakes environments.
+
 # Skills
-**SRE:** Kubernetes, IaC, GitOps, Cloud security and hardening, Observability stacks
+**SRE:** Kubernetes, IaC, GitOps (Flux, ArgoCD), Service Mesh (Istio, Cilium), Cloud security and hardening, Observability
 
-**Cloud:** AWS, Azure, Scaleway
+**Infrastructure:** AWS, Azure, Scaleway, on-prem
 
-**Programming:** Python, TypeScript, Bash
+**Programming:** Python, Go, TypeScript, Bash
 
-**Others:** Linux systems and networking, Containerization, CI/CD, Load testing, PostgreSQL
+**Others:** Linux systems and networking, Containerization, CI/CD, Load testing (k6), PostgreSQL
 
 **Languages:** English, French
 
 # Experience
-## **Site Reliability Engineer**, SWAN -- Remote, France
+## **Senior Site Reliability Engineer**, SWAN -- Remote, France
 
 Feb 2024 – present
 
-- AWS, EKS, Terraform
+- Reduced 5xx error rate on payment-critical paths by tuning Istio circuit breaking, load balancing and retry policies
 
-- Istio and load balancing optimization, reliability hardening for banking operations
+- Built internal load and reliability testing tooling in Go with metrics and traces
 
-- Autoscaling improvement based on Karpenter and Keda
+- Rebuilt autoscaling on Karpenter (mixed fleet) and KEDA, cutting compute cost and scale-out latency
+
+- Led zero-downtime PostgreSQL major upgrades on replicated production clusters under banking compliance constraints
+
+- Operated multiple EKS clusters with 40+ services and complex network stack, including upgrades and hardening
+
+- Designed SLO and alerting framework on Grafana, owned on-call rotation and incident response
 
 
 
@@ -35,15 +44,13 @@ Feb 2024 – present
 
 Sept 2022 – Jan 2024
 
-- Azure Cloud, Kubernetes AKS, Terraform, Pulumi, GitHub Actions
+- Built a Java Kubernetes operator provisioning per-tenant Azure resource groups, storage and databases (80+ tenants)
 
-- ServiceMesh with Istio, GitOps with ArgoCD and backup management with Velero
+- Implemented ISO 27001-aligned SecOps tooling with Falco, Kyverno, Trivy and Azure Workload Identity
 
-- Monitoring using Prometheus, Thanos, Loki, Grafana
+- Deployed Prometheus + Thanos, Loki and Grafana across multi-tenant AKS clusters
 
-- SecOps with Falco, Kyverno, Trivy, Az Workload Identity
-
-- Kubernetes operator development in Java
+- Owned GitOps pipelines with ArgoCD and disaster recovery with Velero
 
 
 
@@ -51,15 +58,11 @@ Sept 2022 – Jan 2024
 
 Aug 2021 – Sept 2022
 
-- Design of AWS / Scaleway cloud architectures with Terraform
+- Designed and delivered AWS/Scaleway Terraform architectures for ~10 client projects
 
-- Administration of RKE / EKS / Kapsule Kubernetes clusters
+- Administered RKE, EKS, and Kapsule Kubernetes clusters and led zero-downtime infrastructure migrations
 
-- Monitoring with Prometheus / Grafana / Loki / CloudWatch
-
-- Infrastructure migration without interruptions
-
-- Deployment of CI/CD and GitOps solutions
+- Deployed CI/CD pipelines, GitOps solutions, and Prometheus/Grafana/Loki monitoring stacks
 
 
 
@@ -67,42 +70,30 @@ Aug 2021 – Sept 2022
 
 Sept 2020 – July 2021
 
-- Script development for automated data conversion and migration
+- Wrote Python/Bash automation for data conversion and migration workflows
 
-- Deployment of wiki websites and RHEL server administration
-
-
-
-## **Python Developer (Internship)**, Lyon 1 UCBL -- Villeurbanne, France
-
-May 2020 – July 2020
-
-- Script development for pre- and post-processing of satellite images and GIS maps
+- Administered RHEL servers and deployed wiki infrastructure
 
 
 
 # Education
-## **Claude Bernard University Lyon 1**, Master in System, Networks and Virtual Infrastructures -- Lyon, France
+## **Claude Bernard University Lyon 1**, Master in System, Networks and Infrastructures -- Lyon, France
 Sept 2020 – June 2022
 
-- Systems, networks and security
-
-- System administration and monitoring
-
-- Virtualization, containerization and orchestration
+- Systems, networks, security, virtualization and orchestration
 
 
 
 ## **Claude Bernard University Lyon 1**, Bachelor's degree in Computer Science -- Lyon, France
 Sept 2017 – June 2020
 
-- Algorithmic, OOP, Networking, DB
+- Algorithms, OOP, networking, databases
 
 
 
 # Certifications
-**CKS, Certified Kubernetes Security Specialist:** 2022-2024
+**CKS, Certified Kubernetes Security Specialist:** 2022
 
-**CKA, Certified Kubernetes Administrator:** 2021-2024
+**CKA, Certified Kubernetes Administrator:** 2021
 
-**TOEIC, English - 990:** 2022-2024
+**TOEIC, English - 990:** 2022

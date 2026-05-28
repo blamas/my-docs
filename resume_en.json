@@ -19,17 +19,21 @@
         "url": "https://github.com/Blamas"
       }
     ],
-    "label": "Site Reliability Engineer"
+    "summary": "Senior SRE building and operating Kubernetes-native platforms across multi-cloud and on-prem environments. Focused on reliability engineering, internal tooling development, and security for high-stakes environments.",
+    "label": "Senior Site Reliability Engineer"
   },
   "work": [
     {
       "name": "SWAN",
-      "position": "Site Reliability Engineer",
+      "position": "Senior Site Reliability Engineer",
       "startDate": "2024-02",
       "highlights": [
-        "AWS, EKS, Terraform",
-        "Istio and load balancing optimization, reliability hardening for banking operations",
-        "Autoscaling improvement based on Karpenter and Keda"
+        "Reduced 5xx error rate on payment-critical paths by tuning Istio circuit breaking, load balancing and retry policies",
+        "Built internal load and reliability testing tooling in Go with metrics and traces",
+        "Rebuilt autoscaling on Karpenter (mixed fleet) and KEDA, cutting compute cost and scale-out latency",
+        "Led zero-downtime PostgreSQL major upgrades on replicated production clusters under banking compliance constraints",
+        "Operated multiple EKS clusters with 40+ services and complex network stack, including upgrades and hardening",
+        "Designed SLO and alerting framework on Grafana, owned on-call rotation and incident response"
       ],
       "location": "Remote, France"
     },
@@ -38,11 +42,10 @@
       "position": "DevOps Engineer",
       "startDate": "2022-09",
       "highlights": [
-        "Azure Cloud, Kubernetes AKS, Terraform, Pulumi, GitHub Actions",
-        "ServiceMesh with Istio, GitOps with ArgoCD and backup management with Velero",
-        "Monitoring using Prometheus, Thanos, Loki, Grafana",
-        "SecOps with Falco, Kyverno, Trivy, Az Workload Identity",
-        "Kubernetes operator development in Java"
+        "Built a Java Kubernetes operator provisioning per-tenant Azure resource groups, storage and databases (80+ tenants)",
+        "Implemented ISO 27001-aligned SecOps tooling with Falco, Kyverno, Trivy and Azure Workload Identity",
+        "Deployed Prometheus + Thanos, Loki and Grafana across multi-tenant AKS clusters",
+        "Owned GitOps pipelines with ArgoCD and disaster recovery with Velero"
       ],
       "location": "Remote, France",
       "endDate": "2024-01"
@@ -52,11 +55,9 @@
       "position": "Cloud Engineer (Apprenticeship)",
       "startDate": "2021-08",
       "highlights": [
-        "Design of AWS / Scaleway cloud architectures with Terraform",
-        "Administration of RKE / EKS / Kapsule Kubernetes clusters",
-        "Monitoring with Prometheus / Grafana / Loki / CloudWatch",
-        "Infrastructure migration without interruptions",
-        "Deployment of CI/CD and GitOps solutions"
+        "Designed and delivered AWS/Scaleway Terraform architectures for ~10 client projects",
+        "Administered RKE, EKS, and Kapsule Kubernetes clusters and led zero-downtime infrastructure migrations",
+        "Deployed CI/CD pipelines, GitOps solutions, and Prometheus/Grafana/Loki monitoring stacks"
       ],
       "location": "Lyon, France",
       "endDate": "2022-09"
@@ -66,34 +67,22 @@
       "position": "IT Project Manager (Apprenticeship)",
       "startDate": "2020-09",
       "highlights": [
-        "Script development for automated data conversion and migration",
-        "Deployment of wiki websites and RHEL server administration"
+        "Wrote Python/Bash automation for data conversion and migration workflows",
+        "Administered RHEL servers and deployed wiki infrastructure"
       ],
       "location": "L'Isle d'Abeau, France",
       "endDate": "2021-07"
-    },
-    {
-      "name": "Lyon 1 UCBL",
-      "position": "Python Developer (Internship)",
-      "startDate": "2020-05",
-      "highlights": [
-        "Script development for pre- and post-processing of satellite images and GIS maps"
-      ],
-      "location": "Villeurbanne, France",
-      "endDate": "2020-07"
     }
   ],
   "education": [
     {
       "institution": "Claude Bernard University Lyon 1",
-      "area": "System, Networks and Virtual Infrastructures",
+      "area": "System, Networks and Infrastructures",
       "studyType": "Master",
       "startDate": "2020-09",
       "endDate": "2022-06",
       "courses": [
-        "Systems, networks and security",
-        "System administration and monitoring",
-        "Virtualization, containerization and orchestration"
+        "Systems, networks, security, virtualization and orchestration"
       ],
       "location": "Lyon, France"
     },
@@ -104,7 +93,7 @@
       "startDate": "2017-09",
       "endDate": "2020-06",
       "courses": [
-        "Algorithmic, OOP, Networking, DB"
+        "Algorithms, OOP, networking, databases"
       ],
       "location": "Lyon, France"
     }
@@ -115,23 +104,28 @@
       "keywords": [
         "Kubernetes",
         "IaC",
-        "GitOps",
+        "GitOps Flux",
+        "ArgoCD",
+        "Service Mesh Istio",
+        "Cilium",
         "Cloud security and hardening",
-        "Observability stacks"
+        "Observability"
       ]
     },
     {
-      "name": "Cloud",
+      "name": "Infrastructure",
       "keywords": [
         "AWS",
         "Azure",
-        "Scaleway"
+        "Scaleway",
+        "on-prem"
       ]
     },
     {
       "name": "Programming",
       "keywords": [
         "Python",
+        "Go",
         "TypeScript",
         "Bash"
       ]
@@ -142,7 +136,7 @@
         "Linux systems and networking",
         "Containerization",
         "CI/CD",
-        "Load testing",
+        "Load testing k6",
         "PostgreSQL"
       ]
     },
@@ -157,15 +151,15 @@
   "certificates": [
     {
       "name": "CKS, Certified Kubernetes Security Specialist",
-      "date": "2022-2024"
+      "date": "2022"
     },
     {
       "name": "CKA, Certified Kubernetes Administrator",
-      "date": "2021-2024"
+      "date": "2021"
     },
     {
       "name": "TOEIC, English - 990",
-      "date": "2022-2024"
+      "date": "2022"
     }
   ]
 }

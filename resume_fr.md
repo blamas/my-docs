@@ -7,27 +7,36 @@
 - GitHub: [Blamas](https://github.com/Blamas)
 
 
+# Profil
+Ingénieur SRE senior spécialisé dans la conception et l'exploitation de plateformes Kubernetes en multi-cloud et on-prem, avec un focus sur le reliability engineering, le développement d'outillage et la sécurité pour des environnements critiques.
+
 # Compétences
-**SRE:** Kubernetes, IaC, GitOps, Sécurité et hardening cloud, Observabilité
+**SRE:** Kubernetes, IaC, GitOps (Flux, ArgoCD), Service Mesh (Istio, Cilium), Sécurité cloud et hardening, Observabilité
 
-**Cloud:** AWS, Azure, Scaleway
+**Infrastructure:** AWS, Azure, Scaleway, on-prem
 
-**Programmation:** Python, TypeScript, Bash
+**Programmation:** Python, Go, TypeScript, Bash
 
-**Autre:** Systèmes Linux et réseau, Conteneurisation, CI/CD, Load testing, PostgreSQL
+**Autres:** Systèmes Linux et réseau, Conteneurisation, CI/CD, Load testing (k6), PostgreSQL
 
 **Langues:** Français, Anglais
 
 # Expérience
-## **Ingénieur SRE**, SWAN -- Remote, France
+## **Ingénieur SRE Senior**, SWAN -- Remote, France
 
 Fév 2024 – présent
 
-- AWS, EKS, Terraform
+- Réduction des 5xx sur les chemins de paiement critiques via tuning Istio (circuit breaking, load balancing, retry)
 
-- Istio mesh et load balancing optimisation, amélioration de la fiabilité pour les opérations bancaires
+- Développement en Go d'un outillage interne de tests de charge et de fiabilité, avec métriques et traces
 
-- Amélioration de l'autoscaling basé sur Karpenter et Keda
+- Refonte de l'autoscaling avec Karpenter (mixed fleet) et KEDA, réduction des coûts et de la latence de scale-out
+
+- Upgrades majeurs PostgreSQL sans interruption sur clusters répliqués sous contraintes de conformité bancaire
+
+- Exploitation de plusieurs clusters EKS (40+ services, stack réseau complexe), upgrades et hardening
+
+- Conception du framework SLO et alerting sur Grafana, astreinte et gestion des incidents
 
 
 
@@ -35,15 +44,13 @@ Fév 2024 – présent
 
 Sep 2022 – Jan 2024
 
-- Azure Cloud, Kubernetes AKS, Terraform, Pulumi, Github Action
+- Développement d'un opérateur Kubernetes en Java pour le provisionnement de resource groups Azure, stockage et bdd par tenant (80+ tenants)
 
-- ServiceMesh avec Istio, Gitops avec Argocd et gestion de sauvegardes sur Velero
+- Mise en place d'un outillage SecOps aligné sur ISO 27001 avec Falco, Kyverno, Trivy et Azure Workload Identity
 
-- Monitoring avec Prometheus, Thanos, Loki, Grafana
+- Déploiement de Prometheus + Thanos, Loki et Grafana sur des clusters AKS multi-tenant
 
-- SecOps avec Falco, Kyverno, Trivy, Az Workload Identity
-
-- Développement d'opérateurs Kubernetes en Java
+- Gestion des pipelines GitOps avec ArgoCD et disaster recovery avec Velero
 
 
 
@@ -51,15 +58,11 @@ Sep 2022 – Jan 2024
 
 Aoû 2021 – Sep 2022
 
-- Conception d'architectures Terraform sur AWS / Scaleway pour des Startups et PME
+- Conception et livraison d'architectures Terraform AWS/Scaleway pour une dizaine de projets clients
 
-- Administration de clusters Kubernetes RKE / EKS / Kapsule
+- Administration de clusters Kubernetes RKE, EKS et Kapsule, migrations sans interruption de service
 
-- Monitoring Prometheus / Grafana / Loki / CloudWatch
-
-- Migration d'infrastructures sans interruptions de services
-
-- Mise en place de solutions CI/CD et gitOps
+- Déploiement de pipelines CI/CD, solutions GitOps et stacks de monitoring Prometheus/Grafana/Loki
 
 
 
@@ -67,42 +70,30 @@ Aoû 2021 – Sep 2022
 
 Sep 2020 – Juil 2021
 
-- Conception de scripts pour traitements automatisés de conversion et migration de données
+- Automatisation de workflows de conversion et migration de données en Python/Bash
 
-- Déploiement de sites wiki et administration de serveurs RHEL
-
-
-
-## **Développeur Python (Stage)**, Lyon 1 UCBL -- Villeurbanne, France
-
-Mai 2020 – Juil 2020
-
-- Développements de scripts de pre/post-processing d'images et de cartes GIS
+- Administration de serveurs RHEL et déploiement d'une infrastructure wiki
 
 
 
 # Formations
-## **Université Claude Bernard Lyon 1**, Master en Systèmes, Réseaux et Infrastructures Virtuelles -- Lyon, France
+## **Université Claude Bernard Lyon 1**, Master en Systèmes, Réseaux et Infrastructures -- Lyon, France
 Sep 2020 – Juin 2022
 
-- Systèmes, réseaux et sécurité avancé
-
-- Gestion de parc, administration système et monitoring
-
-- Virtualisation, containeurisation et orchestration
+- Systèmes, réseaux, sécurité, virtualisation et orchestration
 
 
 
 ## **Université Claude Bernard Lyon 1**, Licence en Informatique -- Lyon, France
 Sep 2017 – Juin 2020
 
-- Algorithmie, POO, Réseaux, BDD
+- Algorithmique, POO, réseaux, bases de données
 
 
 
 # Certifications
-**CKS, Certified Kubernetes Security Specialist:** 2022-2024
+**CKS, Certified Kubernetes Security Specialist:** 2022
 
-**CKA, Certified Kubernetes Administrator:** 2021-2024
+**CKA, Certified Kubernetes Administrator:** 2021
 
-**TOEIC, Anglais - 990:** 2022-2024
+**TOEIC, Anglais - 990:** 2022

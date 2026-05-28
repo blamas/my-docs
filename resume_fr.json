@@ -19,17 +19,21 @@
         "url": "https://github.com/Blamas"
       }
     ],
-    "label": "Ingénieur SRE"
+    "summary": "Ingénieur SRE senior spécialisé dans la conception et l'exploitation de plateformes Kubernetes en multi-cloud et on-prem, avec un focus sur le reliability engineering, le développement d'outillage et la sécurité pour des environnements critiques.",
+    "label": "Ingénieur SRE Senior"
   },
   "work": [
     {
       "name": "SWAN",
-      "position": "Ingénieur SRE",
+      "position": "Ingénieur SRE Senior",
       "startDate": "2024-02",
       "highlights": [
-        "AWS, EKS, Terraform",
-        "Istio mesh et load balancing optimisation, amélioration de la fiabilité pour les opérations bancaires",
-        "Amélioration de l'autoscaling basé sur Karpenter et Keda"
+        "Réduction des 5xx sur les chemins de paiement critiques via tuning Istio (circuit breaking, load balancing, retry)",
+        "Développement en Go d'un outillage interne de tests de charge et de fiabilité, avec métriques et traces",
+        "Refonte de l'autoscaling avec Karpenter (mixed fleet) et KEDA, réduction des coûts et de la latence de scale-out",
+        "Upgrades majeurs PostgreSQL sans interruption sur clusters répliqués sous contraintes de conformité bancaire",
+        "Exploitation de plusieurs clusters EKS (40+ services, stack réseau complexe), upgrades et hardening",
+        "Conception du framework SLO et alerting sur Grafana, astreinte et gestion des incidents"
       ],
       "location": "Remote, France"
     },
@@ -38,11 +42,10 @@
       "position": "Ingénieur DevOps",
       "startDate": "2022-09",
       "highlights": [
-        "Azure Cloud, Kubernetes AKS, Terraform, Pulumi, Github Action",
-        "ServiceMesh avec Istio, Gitops avec Argocd et gestion de sauvegardes sur Velero",
-        "Monitoring avec Prometheus, Thanos, Loki, Grafana",
-        "SecOps avec Falco, Kyverno, Trivy, Az Workload Identity",
-        "Développement d'opérateurs Kubernetes en Java"
+        "Développement d'un opérateur Kubernetes en Java pour le provisionnement de resource groups Azure, stockage et bdd par tenant (80+ tenants)",
+        "Mise en place d'un outillage SecOps aligné sur ISO 27001 avec Falco, Kyverno, Trivy et Azure Workload Identity",
+        "Déploiement de Prometheus + Thanos, Loki et Grafana sur des clusters AKS multi-tenant",
+        "Gestion des pipelines GitOps avec ArgoCD et disaster recovery avec Velero"
       ],
       "location": "Remote, France",
       "endDate": "2024-01"
@@ -52,11 +55,9 @@
       "position": "Ingénieur Cloud (Alternance)",
       "startDate": "2021-08",
       "highlights": [
-        "Conception d'architectures Terraform sur AWS / Scaleway pour des Startups et PME",
-        "Administration de clusters Kubernetes RKE / EKS / Kapsule",
-        "Monitoring Prometheus / Grafana / Loki / CloudWatch",
-        "Migration d'infrastructures sans interruptions de services",
-        "Mise en place de solutions CI/CD et gitOps"
+        "Conception et livraison d'architectures Terraform AWS/Scaleway pour une dizaine de projets clients",
+        "Administration de clusters Kubernetes RKE, EKS et Kapsule, migrations sans interruption de service",
+        "Déploiement de pipelines CI/CD, solutions GitOps et stacks de monitoring Prometheus/Grafana/Loki"
       ],
       "location": "Lyon, France",
       "endDate": "2022-09"
@@ -66,34 +67,22 @@
       "position": "Responsable de projet informatique (Alternance)",
       "startDate": "2020-09",
       "highlights": [
-        "Conception de scripts pour traitements automatisés de conversion et migration de données",
-        "Déploiement de sites wiki et administration de serveurs RHEL"
+        "Automatisation de workflows de conversion et migration de données en Python/Bash",
+        "Administration de serveurs RHEL et déploiement d'une infrastructure wiki"
       ],
       "location": "L'Isle d'Abeau, France",
       "endDate": "2021-07"
-    },
-    {
-      "name": "Lyon 1 UCBL",
-      "position": "Développeur Python (Stage)",
-      "startDate": "2020-05",
-      "highlights": [
-        "Développements de scripts de pre/post-processing d'images et de cartes GIS"
-      ],
-      "location": "Villeurbanne, France",
-      "endDate": "2020-07"
     }
   ],
   "education": [
     {
       "institution": "Université Claude Bernard Lyon 1",
-      "area": "Systèmes, Réseaux et Infrastructures Virtuelles",
+      "area": "Systèmes, Réseaux et Infrastructures",
       "studyType": "Master",
       "startDate": "2020-09",
       "endDate": "2022-06",
       "courses": [
-        "Systèmes, réseaux et sécurité avancé",
-        "Gestion de parc, administration système et monitoring",
-        "Virtualisation, containeurisation et orchestration"
+        "Systèmes, réseaux, sécurité, virtualisation et orchestration"
       ],
       "location": "Lyon, France"
     },
@@ -104,7 +93,7 @@
       "startDate": "2017-09",
       "endDate": "2020-06",
       "courses": [
-        "Algorithmie, POO, Réseaux, BDD"
+        "Algorithmique, POO, réseaux, bases de données"
       ],
       "location": "Lyon, France"
     }
@@ -115,34 +104,39 @@
       "keywords": [
         "Kubernetes",
         "IaC",
-        "GitOps",
-        "Sécurité et hardening cloud",
+        "GitOps Flux",
+        "ArgoCD",
+        "Service Mesh Istio",
+        "Cilium",
+        "Sécurité cloud et hardening",
         "Observabilité"
       ]
     },
     {
-      "name": "Cloud",
+      "name": "Infrastructure",
       "keywords": [
         "AWS",
         "Azure",
-        "Scaleway"
+        "Scaleway",
+        "on-prem"
       ]
     },
     {
       "name": "Programmation",
       "keywords": [
         "Python",
+        "Go",
         "TypeScript",
         "Bash"
       ]
     },
     {
-      "name": "Autre",
+      "name": "Autres",
       "keywords": [
         "Systèmes Linux et réseau",
         "Conteneurisation",
         "CI/CD",
-        "Load testing",
+        "Load testing k6",
         "PostgreSQL"
       ]
     },
@@ -157,15 +151,15 @@
   "certificates": [
     {
       "name": "CKS, Certified Kubernetes Security Specialist",
-      "date": "2022-2024"
+      "date": "2022"
     },
     {
       "name": "CKA, Certified Kubernetes Administrator",
-      "date": "2021-2024"
+      "date": "2021"
     },
     {
       "name": "TOEIC, Anglais - 990",
-      "date": "2022-2024"
+      "date": "2022"
     }
   ]
 }
