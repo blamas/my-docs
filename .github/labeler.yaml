@@ -1,0 +1,21 @@
+---
+area/resume:
+  - changed-files:
+      - any-glob-to-any-file:
+          - resume/**/*
+
+area/site:
+  - changed-files:
+      - any-glob-to-any-file:
+          - site/**/*
+          - scripts/**/*
+
+area/github:
+  - changed-files:
+      - any-glob-to-any-file:
+          - .github/**/*
+
+area/renovate:
+  - changed-files:
+      - any-glob-to-any-file:
+          - .renovaterc.json5
