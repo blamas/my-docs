@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light dark" />
-  <title>Théo Rey, Senior Site Reliability Engineer</title>
-  <meta name="description" content="Resume of Théo Rey, Senior Site Reliability Engineer. Available as PDF, HTML, Markdown and JSON Resume, in English and French." />
+  <title>Théo Rey, Site Reliability Engineer</title>
+  <meta name="description" content="Resume of Théo Rey, Site Reliability Engineer. Available as PDF, HTML, Markdown and JSON Resume, in English and French." />
   <meta name="author" content="Théo Rey" />
   <link rel="canonical" href="https://docs.reyth.dev/" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a1a'/%3E%3Ctext x='16' y='22' font-family='system-ui,sans-serif' font-size='15' font-weight='600' fill='%23fff' text-anchor='middle'%3ETR%3C/text%3E%3C/svg%3E" />
@@ -14,9 +14,13 @@
   <link rel="alternate" type="application/json" hreflang="en" href="https://docs.reyth.dev/resume_en.json" />
   <link rel="alternate" type="application/json" hreflang="fr" href="https://docs.reyth.dev/resume_fr.json" />
   <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Théo Rey, Senior Site Reliability Engineer" />
+  <meta property="og:title" content="Théo Rey, Site Reliability Engineer" />
   <meta property="og:description" content="Resume in English and French: PDF, HTML, Markdown and JSON Resume." />
   <meta property="og:url" content="https://docs.reyth.dev/" />
+  <meta property="og:site_name" content="Théo Rey" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="me" href="https://github.com/blamas" />
+  <link rel="me" href="https://www.linkedin.com/in/reyth" />
   <meta property="profile:first_name" content="Théo" />
   <meta property="profile:last_name" content="Rey" />
   <script type="application/ld+json">
@@ -24,12 +28,12 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Théo Rey",
-    "jobTitle": "Senior Site Reliability Engineer",
+    "jobTitle": "Site Reliability Engineer",
     "email": "mailto:contact@reyth.dev",
     "url": "https://www.reyth.dev",
     "address": { "@type": "PostalAddress", "addressCountry": "FR" },
     "knowsLanguage": ["fr", "en"],
-    "sameAs": ["https://www.linkedin.com/in/reyth", "https://github.com/Blamas"],
+    "sameAs": ["https://www.linkedin.com/in/reyth", "https://github.com/blamas"],
     "subjectOf": [
       { "@type": "DigitalDocument", "name": "Resume (English, PDF)",      "encodingFormat": "application/pdf",  "inLanguage": "en", "url": "https://docs.reyth.dev/resume_en.pdf" },
       { "@type": "DigitalDocument", "name": "Resume (French, PDF)",       "encodingFormat": "application/pdf",  "inLanguage": "fr", "url": "https://docs.reyth.dev/resume_fr.pdf" },
@@ -55,29 +59,30 @@
     li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.45rem 0; border-bottom: 1px solid var(--rule); }
     li:last-child { border-bottom: none; }
     a  { color: var(--fg); text-decoration: none; }
-    a:hover, a:focus-visible { text-decoration: underline; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
     li span { color: var(--faint); font-size: 0.85rem; }
   </style>
 </head>
 <body>
   <main>
     <h1>Théo Rey</h1>
-    <p>Senior Site Reliability Engineer, France</p>
+    <p>Site Reliability Engineer, France</p>
 
     <h2 id="en">English</h2>
     <ul aria-labelledby="en">
-      <li><a href="resume_en.pdf"  hreflang="en" type="application/pdf">Resume</a>              <span>PDF</span></li>
-      <li><a href="resume_en.html" hreflang="en" type="text/html">Resume</a>                    <span>HTML</span></li>
-      <li><a href="resume_en.md"   hreflang="en" type="text/markdown">Resume</a>                <span>Markdown</span></li>
-      <li><a href="resume_en.json" hreflang="en" type="application/json">JSON Resume</a>        <span>JSON</span></li>
+      <li><a href="resume_en.pdf" aria-label="English resume, PDF"  hreflang="en" type="application/pdf">Resume</a>              <span>PDF</span></li>
+      <li><a href="resume_en.html" aria-label="English resume, HTML" hreflang="en" type="text/html">Resume</a>                    <span>HTML</span></li>
+      <li><a href="resume_en.md" aria-label="English resume, Markdown"   hreflang="en" type="text/markdown">Resume</a>                <span>Markdown</span></li>
+      <li><a href="resume_en.json" aria-label="English JSON Resume, JSON" hreflang="en" type="application/json">JSON Resume</a>        <span>JSON</span></li>
     </ul>
 
     <h2 id="fr">Français</h2>
     <ul aria-labelledby="fr" lang="fr">
-      <li><a href="resume_fr.pdf"  hreflang="fr" type="application/pdf">CV</a>                  <span>PDF</span></li>
-      <li><a href="resume_fr.html" hreflang="fr" type="text/html">CV</a>                        <span>HTML</span></li>
-      <li><a href="resume_fr.md"   hreflang="fr" type="text/markdown">CV</a>                    <span>Markdown</span></li>
-      <li><a href="resume_fr.json" hreflang="fr" type="application/json">JSON Resume</a>        <span>JSON</span></li>
+      <li><a href="resume_fr.pdf" aria-label="CV en français, PDF"  hreflang="fr" type="application/pdf">CV</a>                  <span>PDF</span></li>
+      <li><a href="resume_fr.html" aria-label="CV en français, HTML" hreflang="fr" type="text/html">CV</a>                        <span>HTML</span></li>
+      <li><a href="resume_fr.md" aria-label="CV en français, Markdown"   hreflang="fr" type="text/markdown">CV</a>                    <span>Markdown</span></li>
+      <li><a href="resume_fr.json" aria-label="JSON Resume en français, JSON" hreflang="fr" type="application/json">JSON Resume</a>        <span>JSON</span></li>
     </ul>
   </main>
 </body>
