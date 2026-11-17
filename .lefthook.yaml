@@ -1,0 +1,31 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/evilmartians/lefthook/master/schema.json
+pre-commit:
+  parallel: true
+  skip:
+    - merge
+    - rebase
+  jobs:
+    - name: oxfmt
+      glob: "*.{yaml,yml,md,json,json5}"
+      run: oxfmt --no-error-on-unmatched-pattern {staged_files}
+      stage_fixed: true
+    - name: just-fmt
+      glob: ".justfile"
+      run: just --fmt
+      stage_fixed: true
+    - name: ruff-format
+      glob: "*.py"
+      run: ruff format {staged_files}
+      stage_fixed: true
+    - name: ruff-check
+      glob: "*.py"
+      run: ruff check {staged_files}
+    - name: gitleaks
+      run: gitleaks git --staged --redact --no-banner
+    - name: actionlint
+      glob: ".github/workflows/*.yaml"
+      run: actionlint {staged_files}
+    - name: zizmor
+      glob: ".github/workflows/*.yaml"
+      run: zizmor --offline {staged_files}

@@ -1,0 +1,29 @@
+---
+# Areas
+- name: area/github
+  color: "1d76db"
+- name: area/renovate
+  color: "1d76db"
+- name: area/resume
+  color: "1d76db"
+- name: area/site
+  color: "1d76db"
+# Renovate Types
+- name: renovate/github-action
+  color: "0e8a16"
+- name: renovate/mise
+  color: "0e8a16"
+- name: renovate/python
+  color: "0e8a16"
+# Semantic Types
+- name: type/digest
+  color: "c2e0c6"
+- name: type/patch
+  color: "2b8a3e"
+- name: type/minor
+  color: "fbca04"
+- name: type/major
+  color: "d73a4a"
+# Uncategorized
+- name: hold
+  color: "9a6700"

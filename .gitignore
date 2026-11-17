@@ -1,20 +1,3 @@
 .venv/
-
-### RenderCV build outputs ###
+_site/
 resume/rendercv_output/
-public/resume_en.pdf
-public/resume_fr.pdf
-public/resume.pdf
-public/resume_en.md
-public/resume_fr.md
-public/resume_en.html
-public/resume_fr.html
-public/resume_en.json
-public/resume_fr.json
-
-### Editor ###
-.*sw[op]
-*~
-
-### Mac OS X ###
-*.DS_Store

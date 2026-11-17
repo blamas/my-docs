@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/sinaatalay/rendercv/main/schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/v2.8/schema.json
 cv:
   name: Théo Rey
   location: France
