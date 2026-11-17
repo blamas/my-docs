@@ -3,26 +3,22 @@
   extends: [
     "config:recommended",
     "helpers:pinGitHubActionDigests",
-    ":dependencyDashboard",
     ":semanticCommits",
     ":automergeBranch",
   ],
-  schedule: ["at any time"],
+  lockFileMaintenance: { enabled: true, automerge: true },
   packageRules: [
     {
-      matchManagers: ["github-actions"],
-      automerge: true,
-      automergeType: "branch",
       matchUpdateTypes: ["minor", "patch", "digest"],
+      matchCurrentVersion: "!/^v?0\\./",
+      automerge: true,
       minimumReleaseAge: "3 days",
-      ignoreTests: true,
     },
     {
-      matchManagers: ["mise", "pip"],
-      automerge: true,
-      automergeType: "branch",
+      matchPackageNames: ["uv", "astral-sh/uv"],
       matchUpdateTypes: ["patch"],
-      ignoreTests: true,
+      automerge: true,
+      minimumReleaseAge: "3 days",
     },
   ],
 }
