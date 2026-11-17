@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.html linguist-detectable linguist-language=HTML
+*.json5 linguist-detectable linguist-language=JSON5
+*.justfile linguist-detectable linguist-language=JUST
+*.md linguist-detectable linguist-language=MARKDOWN
+*.py linguist-detectable linguist-language=PYTHON
+*.toml linguist-detectable linguist-language=TOML
+*.yaml linguist-detectable linguist-language=YAML
