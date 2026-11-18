@@ -53,15 +53,15 @@
     }
     body { font-family: system-ui, sans-serif; max-width: 30rem; margin: 4rem auto; padding: 0 1.5rem; color: var(--fg); background: var(--bg); line-height: 1.6; }
     h1 { font-size: 1.25rem; font-weight: 600; margin: 0 0 0.2rem; }
-    h2 { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--faint); margin: 2rem 0 0.25rem; }
     p  { margin: 0; color: var(--muted); font-size: 0.9rem; }
-    ul { list-style: none; padding: 0; margin: 0; }
-    li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.45rem 0; border-bottom: 1px solid var(--rule); }
+    ul { list-style: none; padding: 0; margin: 2rem 0 0; }
+    li { display: grid; grid-template-columns: 8rem 1fr; align-items: baseline; padding: 0.6rem 0; border-bottom: 1px solid var(--rule); }
     li:last-child { border-bottom: none; }
+    .lang { color: var(--faint); font-size: 0.85rem; }
     a  { color: var(--fg); text-decoration: none; }
     a:hover { text-decoration: underline; }
     a:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
-    li span { color: var(--faint); font-size: 0.85rem; }
+    .sep { color: var(--rule); padding: 0 0.35rem; }
   </style>
 </head>
 <body>
@@ -69,20 +69,9 @@
     <h1>Théo Rey</h1>
     <p>Site Reliability Engineer, France</p>
 
-    <h2 id="en">English</h2>
-    <ul aria-labelledby="en">
-      <li><a href="resume_en.pdf" aria-label="English resume, PDF"  hreflang="en" type="application/pdf">Resume</a>              <span>PDF</span></li>
-      <li><a href="resume_en.html" aria-label="English resume, HTML" hreflang="en" type="text/html">Resume</a>                    <span>HTML</span></li>
-      <li><a href="resume_en.md" aria-label="English resume, Markdown"   hreflang="en" type="text/markdown">Resume</a>                <span>Markdown</span></li>
-      <li><a href="resume_en.json" aria-label="English JSON Resume, JSON" hreflang="en" type="application/json">JSON Resume</a>        <span>JSON</span></li>
-    </ul>
-
-    <h2 id="fr">Français</h2>
-    <ul aria-labelledby="fr" lang="fr">
-      <li><a href="resume_fr.pdf" aria-label="CV en français, PDF"  hreflang="fr" type="application/pdf">CV</a>                  <span>PDF</span></li>
-      <li><a href="resume_fr.html" aria-label="CV en français, HTML" hreflang="fr" type="text/html">CV</a>                        <span>HTML</span></li>
-      <li><a href="resume_fr.md" aria-label="CV en français, Markdown"   hreflang="fr" type="text/markdown">CV</a>                    <span>Markdown</span></li>
-      <li><a href="resume_fr.json" aria-label="JSON Resume en français, JSON" hreflang="fr" type="application/json">JSON Resume</a>        <span>JSON</span></li>
+    <ul>
+      <li><span class="lang">English resume</span> <span class="links"><a href="resume_en.pdf" hreflang="en" type="application/pdf" aria-label="English resume, PDF">PDF</a><span class="sep" aria-hidden="true">·</span><a href="resume_en.html" hreflang="en" type="text/html" aria-label="English resume, HTML">HTML</a><span class="sep" aria-hidden="true">·</span><a href="resume_en.md" hreflang="en" type="text/markdown" aria-label="English resume, Markdown">Markdown</a><span class="sep" aria-hidden="true">·</span><a href="resume_en.json" hreflang="en" type="application/json" aria-label="English JSON Resume, JSON">JSON</a></span></li>
+      <li lang="fr"><span class="lang">CV en français</span> <span class="links"><a href="resume_fr.pdf" hreflang="fr" type="application/pdf" aria-label="CV en français, PDF">PDF</a><span class="sep" aria-hidden="true">·</span><a href="resume_fr.html" hreflang="fr" type="text/html" aria-label="CV en français, HTML">HTML</a><span class="sep" aria-hidden="true">·</span><a href="resume_fr.md" hreflang="fr" type="text/markdown" aria-label="CV en français, Markdown">Markdown</a><span class="sep" aria-hidden="true">·</span><a href="resume_fr.json" hreflang="fr" type="application/json" aria-label="JSON Resume en français, JSON">JSON</a></span></li>
     </ul>
   </main>
 </body>
