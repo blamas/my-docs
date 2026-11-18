@@ -21,6 +21,7 @@ SOCIAL_URL = {
 }
 
 LANGUAGE_LABELS = {"languages", "langues"}
+CERTIFICATE_LABELS = {"certifications"}
 
 
 def date_str(val) -> str:
@@ -102,19 +103,26 @@ def map_projects(entries: list) -> list:
     ]
 
 
-def map_one_line(entries: list, kind: str) -> tuple[list, list]:
-    skills, languages = [], []
+def map_one_line(entries: list, kind: str) -> tuple[list, list, list]:
+    skills, languages, certificates = [], [], []
     for e in entries:
         details = strip_markdown(e.get("details", ""))
         if e["label"].lower() in LANGUAGE_LABELS:
             for lang in split_top_level(details):
                 name, _, fluency = lang.partition("(")
-                languages.append({"language": name.strip(), "fluency": fluency.rstrip(")").strip()})
+                name, fluency = name.strip(), fluency.rstrip(")").strip()
+                languages.append({"language": name[:1].upper() + name[1:], **({"fluency": fluency} if fluency else {})})
         elif kind == "certificates":
-            skills.append({"name": strip_markdown(e["label"]), "date": details})
+            certificates.append({"name": strip_markdown(e["label"]), "date": details})
+        elif e["label"].lower() in CERTIFICATE_LABELS:
+            for cert in split_top_level(details):
+                if m := re.fullmatch(r"(.+?)\s*\((\d{4}(?:-\d{2}){0,2})\)", cert):
+                    certificates.append({"name": m[1], "date": m[2]})
+                else:
+                    certificates.append({"name": cert})
         else:
             skills.append({"name": strip_markdown(e["label"]), "keywords": split_top_level(details)})
-    return skills, languages
+    return skills, languages, certificates
 
 
 def classify_section(name: str, entries: list) -> str:
@@ -167,9 +175,10 @@ def convert(src: Path) -> dict:
         elif kind == "projects":
             out["projects"] += map_projects(entries)
         elif kind in ("skills", "certificates"):
-            items, languages = map_one_line(entries, kind)
-            out[kind] += items
+            items, languages, certificates = map_one_line(entries, kind)
+            out["skills"] += items
             out["languages"] += languages
+            out["certificates"] += certificates
         else:
             print(f"warning: skipping unrecognised section '{section}'", file=sys.stderr)
 
