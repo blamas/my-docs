@@ -1,5 +1,5 @@
 [tools]
-"aqua:astral-sh/ruff" = "0.17.5"
+"aqua:astral-sh/ruff" = "0.17.6"
 "aqua:astral-sh/uv" = "0.13.9"
 "aqua:casey/just" = "1.59.0"
 "aqua:evilmartians/lefthook" = "2.2.2"
