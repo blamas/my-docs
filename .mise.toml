@@ -8,7 +8,7 @@
 "aqua:rhysd/actionlint" = "1.7.12"
 "aqua:zizmorcore/zizmor" = "1.33.1"
 node = "26.13.1"
-"npm:oxfmt" = "0.79.0"
+"npm:oxfmt" = "0.80.0"
 
 [hooks]
 postinstall = "lefthook install"
